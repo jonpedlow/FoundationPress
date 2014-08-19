@@ -4,6 +4,13 @@ Author: Ole Fredrik Lie
 URL: http://olefredrik.com
 */
 
+/*  Enqueue css
+/* ------------------------------------ */ 
+function prolixi_styles() 
+{
+    wp_enqueue_style( 'customstyle', get_template_directory_uri().'/style.css' );
+}
+add_action( 'wp_enqueue_scripts', 'prolixi_styles' ); 
 
 // Various clean up functions
 require_once('library/cleanup.php');
